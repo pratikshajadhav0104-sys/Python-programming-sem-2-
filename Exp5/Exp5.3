@@ -1,0 +1,27 @@
+# program of dictionary stores books
+"""
+Created on Tue Mar 17 13:27:46 2026
+
+@author: pratiksha jadhav
+"""
+
+# create dictionary
+library = {
+    "Python Basics": 250,
+    "Data Structures": 400,
+    "Algorithms": 500
+}
+
+# update book price
+book_name = "Data Structures"
+new_price = 450
+
+# updating
+if book_name in library:
+    library[book_name] = new_price
+    print("Price updated successfully.")
+else:
+    print("Book not found.")
+
+# display updated dictionary
+print(library)
