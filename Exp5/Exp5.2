@@ -1,0 +1,21 @@
+# program of two sets
+"""
+Created on Tue Mar 17 13:04:14 2026
+
+@author: pratiksha jadhav 
+"""
+#taking input for the firstr set 
+set1=set(map(int,input("enter elements of first set (space-separated):").split()))
+
+#taking input for the second set 
+set2=set(map(int,input("enter elements of second set (space-separated):").split()))
+ 
+#Union of two sets
+union_set =set1|set2  #or set1.union(set2)
+
+#intersection  of two sets
+intersection_set = set1&set2 # or set1.intersection(set2)
+
+#display the results 
+print("Union of the sets:", union_set)
+print("intersection of the sets:",intersection_set)
