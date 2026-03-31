@@ -1,0 +1,22 @@
+# program of list ,average,sum of element
+"""
+Created on Tue Mar 31 12:37:24 2026
+
+@author: pratiksha jadhav
+"""
+
+# taking list input from the user 
+n= int(input(f"enter number of element:"))
+number=[]
+
+for i in range(n):
+  num=int(input(f"enter element{i+1}:"))
+  number.append(num)
+
+# calculating sum and average
+total= sum(number)
+average = total/n if n>0 else 0
+
+print("list:",number)
+print("sum of elements:",total)
+print("average of elements:",average)
