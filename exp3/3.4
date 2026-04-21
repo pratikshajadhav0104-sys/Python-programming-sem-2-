@@ -1,0 +1,14 @@
+# program of EMI calculator
+"""
+Created on Tue Apr 21 12:55:52 2026
+
+@author:  pratiksha jadhav
+"""
+
+#EMI calculator
+p = float(input("Enter loan amount: "))
+r = float(input("Enter annual interest rate: "))
+n = int(input("Enter months: "))
+r = r / (12 * 100)
+emi = (p * r * (1+r)**n) / ((1+r)**n - 1)
+print("EMI =", round(emi, 2))
