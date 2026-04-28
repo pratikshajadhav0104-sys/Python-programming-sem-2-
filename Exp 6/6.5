@@ -1,0 +1,15 @@
+# program of file 
+"""
+Created on Tue Mar 24 07:38:11 2026
+
+@author: pratiksha 
+"""
+
+file = open("report.txt", "r")
+
+text = file.read()
+words = text.split()
+
+print("Total number of words =", len(words))
+
+file.close()
