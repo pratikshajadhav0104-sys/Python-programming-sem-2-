@@ -1,0 +1,26 @@
+# program of employe class 
+"""
+Created on Tue Apr 28 13:35:24 2026
+
+@author: pratiksha jadhav 
+"""
+
+class Employee:
+    def __init__(self, name, base_salary):
+        self.name = name
+        self.base_salary = base_salary
+
+    def calculate_salary(self):
+        bonus = 0.10 * self.base_salary  # 10% bonus
+        total_salary = self.base_salary + bonus
+        return total_salary
+
+    def display(self):
+        print(f"Employee Name: {self.name}")
+        print(f"Base Salary: ₹{self.base_salary}")
+        print(f"Total Salary (with bonus): ₹{self.calculate_salary():.2f}")
+
+
+# Example usage
+emp1 = Employee("Amit", 30000)
+emp1.display()
