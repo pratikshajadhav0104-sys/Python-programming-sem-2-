@@ -1,0 +1,18 @@
+# program of file
+"""
+Created on Tue Mar 24 07:31:06 2026
+
+@author: pratiksha 
+"""
+
+file = open("attendance.txt", "a")
+
+n = int(input("Enter number of students: "))
+for i in range(n):
+    name = input("Enter student name: ")
+    status = input("Present/Absent: ")
+    file.write(name + " - " + status + "\n")
+
+file.close()
+
+print("Attendance saved successfully.")
