@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 21 12:56:47 2026
+
+@author: pratiksha  Jadhav 
+"""
+
+def split_bill():
+    try:
+        total_bill = float(input("Enter total bill amount: "))
+        people = int(input("Enter number of people: "))
+
+        if people <= 0:
+            print("Number of people must be greater than zero.")
+        else:
+            share = total_bill / people
+            print(f"Each person should pay: ₹{share:.2f}")
+
+    except ValueError:
+        print("Invalid input! Please enter numeric values.")
+    except ZeroDivisionError:
+        print("Cannot divide by zero! Number of people cannot be zero.")
