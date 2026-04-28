@@ -1,0 +1,23 @@
+# program of class ATM
+"""
+Created on Tue Apr 21 13:40:17 2026
+
+@author: pratiksha jadhav
+"""
+
+class ATM:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def check_balance(self):
+        print(f"Current balance: ₹{self.balance}")
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("Enter a valid withdrawal amount.")
+        elif amount > self.balance:
+            print("Insufficient balance! Transaction declined.")
+        else:
+            self.balance -= amount
+            print(f"Withdrawal successful! You withdrew ₹{amount}")
+            print(f"Remaining balance: ₹{self.balance}")
