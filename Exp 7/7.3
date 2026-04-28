@@ -1,0 +1,33 @@
+# program of online order 
+"""
+Created on Tue Apr 28 13:34:51 2026
+
+@author: pratiksha jadhav
+"""
+
+class OnlineOrder:
+    def __init__(self):
+        self.items = []  # list of (name, price, quantity)
+
+    def add_item(self, name, price, quantity):
+        self.items.append((name, price, quantity))
+
+    def calculate_total(self):
+        total = 0
+        for name, price, quantity in self.items:
+            total += price * quantity
+        return total
+
+    def display_order(self):
+        print("Order Summary:")
+        for name, price, quantity in self.items:
+            print(f"{name} - ₹{price} x {quantity}")
+        print("Total Cost: ₹", self.calculate_total())
+
+
+# Example usage
+order = OnlineOrder()
+order.add_item("Book", 200, 2)
+order.add_item("Pen", 20, 5)
+
+order.display_order()
